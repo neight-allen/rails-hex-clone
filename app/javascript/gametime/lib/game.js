@@ -4,6 +4,8 @@ const Board = require('./board');
 const Shape = require('./shape');
 const hexHelper = require('./hex-helper');
 
+var shapesInWaiting, score, isMouseDown, board, shapeInHand, shapeFrom, mouseCoords, canvas, ctx, shapesInWaitingBoxes;;
+
 function drawShapesInWaiting() {
   shapesInWaiting.first.draw(650, 150, .5);
   shapesInWaiting.second.draw(650, 300, .5);
@@ -29,27 +31,27 @@ function whichShapeDidYouPick() {
 
 
 // board.addRandomTiles();
-document.addEventListener("load", () => {
-  const canvas = document.getElementById("game");
-  const ctx = canvas.getContext('2d');
+document.addEventListener("DOMContentLoaded", () => {
+  canvas = document.getElementById("game");
+  ctx = canvas.getContext('2d');
 
-  var score = 0;
+  score = 0;
 
-  var isMouseDown = false;
-  var board = new Board(ctx);
+  isMouseDown = false;
+  board = new Board(ctx);
 
-  var shapeInHand = false;
-  var shapeFrom = "zero";
+  shapeInHand = false;
+  shapeFrom = "zero";
 
-  var mouseCoords = {};
+  mouseCoords = {};
 
-  var shapesInWaiting = {
+  shapesInWaiting = {
     first: new Shape(ctx),
     second: new Shape(ctx),
     third: new Shape(ctx)
   }
 
-  const shapesInWaitingBoxes = [
+  shapesInWaitingBoxes = [
     {key: "first", bounds: [600, 700, 100, 200]},
     {key: "second", bounds: [600, 700, 250, 350]},
     {key: "third", bounds: [600, 700, 400, 500]},

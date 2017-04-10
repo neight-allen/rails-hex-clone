@@ -2,16 +2,22 @@ const _ = require('underscore');
 const Tile = require('./tile');
 const hexHelper = require('./hex-helper');
 const Hex = require('./hex')
+const tiles = [
+  require('../images/tile_hex_1.svg'),
+  require('../images/tile_hex_2.svg'),
+  require('../images/tile_hex_3.svg'),
+  require('../images/tile_hex_4.svg'),
+];
 
 var image_width = (hexHelper.size * 2) - 2;
 
 const possibleShapes = [
   {
-    image: "images/tile_hex_2.svg",
+    image: tiles[1],
     coords: [ [0,0,0] ],
   },
   {
-    image: "images/tile_hex_3.svg",
+    image: tiles[2],
     coords: [
       [-1,0,1],
       [0,0,0],
@@ -20,7 +26,7 @@ const possibleShapes = [
     ],
   },
   {
-    image: "images/tile_hex_3.svg",
+    image: tiles[2],
     coords: [
       [-1,1,0],
       [0,0,0],
@@ -29,7 +35,7 @@ const possibleShapes = [
     ],
   },
   {
-    image: "images/tile_hex_3.svg",
+    image: tiles[2],
     coords: [
       [0,-1,1],
       [0,0,0],
@@ -38,7 +44,7 @@ const possibleShapes = [
     ],
   },
   {
-    image: "images/tile_hex_4.svg",
+    image: tiles[3],
     coords: [
       [0,-1,1],
       [0,0,0],
@@ -47,7 +53,7 @@ const possibleShapes = [
     ],
   },
   {
-    image: "images/tile_hex_4.svg",
+    image: tiles[3],
     coords: [
       [0,-1,1],
       [0,0,0],
@@ -56,7 +62,7 @@ const possibleShapes = [
     ],
   },
   {
-    image: "images/tile_hex_4.svg",
+    image: tiles[3],
     coords: [
       [-1,1,0],
       [0,0,0],
@@ -65,7 +71,7 @@ const possibleShapes = [
     ],
   },
   {
-    image: "images/tile_hex_4.svg",
+    image: tiles[3],
     coords: [
       [-1,1,0],
       [0,0,0],
@@ -74,7 +80,7 @@ const possibleShapes = [
     ],
   },
   {
-    image: "images/tile_hex_4.svg",
+    image: tiles[3],
     coords: [
       [-1,0,1],
       [0,0,0],
@@ -83,7 +89,7 @@ const possibleShapes = [
     ],
   },
   {
-    image: "images/tile_hex_4.svg",
+    image: tiles[3],
     coords: [
       [-1,0,1],
       [0,0,0],
@@ -92,7 +98,7 @@ const possibleShapes = [
     ],
   },
   {
-    image: "images/tile_hex_1.svg",
+    image: tiles[0],
     coords: [
       [0,0,0],
       [-1,1,0],
@@ -101,7 +107,7 @@ const possibleShapes = [
     ],
   },
   {
-    image: "images/tile_hex_1.svg",
+    image: tiles[0],
     coords: [
       [0,0,0],
       [-1,1,0],
